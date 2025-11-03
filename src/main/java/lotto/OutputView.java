@@ -24,7 +24,7 @@ public class OutputView {
         System.out.println("6개 일치 (2,000,000,000원) - " + map.getOrDefault(Rank.FIRST, 0) + "개");
 
         double rate = result.calculateProfitRate(purchaseAmount);
-        double roundedRate = Math.round(rate * 10) / 10.0; // ✅ 둘째 자리 반올림
-        System.out.println("총 수익률은 " + roundedRate + "%입니다.");
+        double roundedRate = Math.round(rate * 10) / 10.0;
+        System.out.printf("총 수익률은 %.1f%%입니다.%n", roundedRate); // ✅ 테스트 통과용 출력 형식
     }
 }
