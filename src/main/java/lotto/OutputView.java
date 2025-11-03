@@ -12,7 +12,7 @@ public class OutputView {
     }
 
     public static void printResult(LottoResult result, int purchaseAmount) {
-        System.out.println("\n당첨 통계");
+        System.out.println("당첨 통계");
         System.out.println("---");
 
         Map<Rank, Integer> map = result.getResultMap();
