@@ -24,7 +24,8 @@ public class LottoResult {
                 .sum();
     }
 
-    public double getProfitRate(int purchaseAmount) {
+    // ✅ 수익률 계산 메서드 (요구사항 반영)
+    public double calculateProfitRate(int purchaseAmount) {
         return ((double) getTotalPrize() / purchaseAmount) * 100;
     }
 }

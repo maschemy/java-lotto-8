@@ -1,6 +1,5 @@
 package lotto;
 
-import java.text.DecimalFormat;
 import java.util.*;
 
 public class OutputView {
@@ -24,7 +23,8 @@ public class OutputView {
         System.out.println("5개 일치, 보너스 볼 일치 (30,000,000원) - " + map.getOrDefault(Rank.SECOND, 0) + "개");
         System.out.println("6개 일치 (2,000,000,000원) - " + map.getOrDefault(Rank.FIRST, 0) + "개");
 
-        DecimalFormat df = new DecimalFormat("#.##");
-        System.out.println("총 수익률은 " + df.format(result.getProfitRate(purchaseAmount)) + "%입니다.");
+        double rate = result.calculateProfitRate(purchaseAmount);
+        double roundedRate = Math.round(rate * 10) / 10.0; // ✅ 둘째 자리 반올림
+        System.out.println("총 수익률은 " + roundedRate + "%입니다.");
     }
 }
