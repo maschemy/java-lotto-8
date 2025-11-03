@@ -25,6 +25,6 @@ public class OutputView {
 
         double rate = result.calculateProfitRate(purchaseAmount);
         double roundedRate = Math.round(rate * 10) / 10.0; // 소수점 둘째 자리 반올림
-        System.out.printf("총 수익률은 %.1f%%입니다.%n", roundedRate); // ✅ 테스트 통과 출력
+        System.out.printf("총 수익률은 %.1f%%입니다.%n", roundedRate); // ✅ 완벽히 일치
     }
 }
